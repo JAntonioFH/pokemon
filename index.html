@@ -4,22 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/script.js"></script>
     <title>Pokemon!</title>
 </head>
 <body>
     <h1>Pokemon!</h1>
     <section id="seleccionar-mascota">
         <h2>Selecciona tu mascota</h2>
+        <!-- Aquí l atributo "name" sirve para agrupar botones de radio y así solo pueda haber uno seleccionado del grupo -->
+        <label for="bulbasaur">Bulbasaur</label>
+        <input type="radio" name="mascotas" id="bulbasaur"/>
+
+        <label for="charmander">Charmander</label>
+        <input type="radio" name="mascotas" id="charmander"/>
+
+        <label for="squirtle">Squirtle</label>
+        <input type="radio" name="mascotas" id="squirtle"/>
+
+        <p><button id="buttSeleccionar">Seleccionar</button></p>
+
     </section>
 
     <section id="seleccionar-ataque">
-        <p>Tu mascota tiene <span>3 </span>vidas </p>
-        <p>La mascota enemiga tiene <span>3 </span>vidas </p>
+        <p>Tu mascota <span id="spanNombreMascotaJugador"></span> tiene <span id="spanVidasJugador">3 </span>vidas </p>
+        <p>La mascota <span id="spanNombreMascotaEnemiga"></span> enemiga tiene <span id="spanVidasEnemigo">3 </span>vidas </p>
         <p>
-            <button>Fuego 🔥</button>
-            <button>Agua 💧</button>
-            <button>Tierra 🌱</button>
+            <button id="buttFuego">Fuego 🔥</button>
+            <button id="buttAgua">Agua 💧</button>
+            <button id="buttTierra">Tierra 🌱</button>
         </p>
+    </section>
+    <section ID="mensajes">
+
+    </section>
+    <section id="secResultadoPelea">
+    <section id="secBotonReiniciar">
+        <button id="buttReiniciar">Reiniciar</button>
     </section>
     
 </body>
