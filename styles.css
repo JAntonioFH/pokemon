@@ -18,7 +18,7 @@ h1 {
     border: 1px solid black;
 }
 .tarjeta-de-pokepon{
-    font-size: small;
+    font-size: 12px;
     margin: 4px;
     width: 95px;
     height: 95px;
@@ -35,8 +35,9 @@ h1 {
     display: none;
 }
 .tarjetas{
+    font-weight: bolder;
     display: flex;
-
+    color: white;
     gap: 0px;
 }
 #buttSeleccionar{
