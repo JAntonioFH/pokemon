@@ -5,23 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./js/script.js"></script>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Pokemon!</title>
 </head>
 <body>
-    <h1>Pokemon!</h1>
+    
+    
     <section id="seleccionar-mascota">
-        <h2>Selecciona tu mascota</h2>
-        <!-- Aquí l atributo "name" sirve para agrupar botones de radio y así solo pueda haber uno seleccionado del grupo -->
-        <label for="bulbasaur">Bulbasaur</label>
-        <input type="radio" name="mascotas" id="bulbasaur"/>
+        <h1 class="titulo">Pokemon!</h1>
+        <h2 class="subtitulo">Selecciona tu mascota</h2>
+        <div class="tarjetas">
+            <!-- Aquí l atributo "name" sirve para agrupar botones de radio y así solo pueda haber uno seleccionado del grupo -->
+        <label class="tarjeta-de-pokepon" for="bulbasaur">
+            <p>Bulbasaur</p>
+            <img src="./assets/bulbasaur.png"/>
+        </label>
+        <input class="botones-seleccionar-mascota" type="radio" name="mascotas" id="bulbasaur"/>
+        <label class="tarjeta-de-pokepon" for="charmander">
+            <p>Charmander</p>
+            <img src="./assets/charmander.png"/>
+        </label>
+        <input class="botones-seleccionar-mascota" type="radio" name="mascotas" id="charmander"/>
+        <label class="tarjeta-de-pokepon" for="squirtle">
+            <p>Squirtle</p>
+            <img src="./assets/squirtle.png"/>
+        </label>
+        <input class="botones-seleccionar-mascota" type="radio" name="mascotas" id="squirtle"/>
 
-        <label for="charmander">Charmander</label>
-        <input type="radio" name="mascotas" id="charmander"/>
-
-        <label for="squirtle">Squirtle</label>
-        <input type="radio" name="mascotas" id="squirtle"/>
-
+        </div>
+        
         <p><button id="buttSeleccionar">Seleccionar</button></p>
 
     </section>
