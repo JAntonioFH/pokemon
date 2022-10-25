@@ -1,24 +1,32 @@
+body{
+    font-family: "Merriweather";
+    text-align: center;
+    background-color: azure;
+    padding: 10px 0;
+}
 h1 {
-    color: blue;
-    width: 310px;
+    color: #06283D;
+    width: 296px;
     height: 50px;
-    background-color: aquamarine;
+    background-color: #47B5FF;
 }
 #seleccionar-mascota{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 1px solid black;
 }
 .tarjeta-de-pokepon{
-    margin: 10px;
-    width: 100px;
-    height: 100px;
-    background: aquamarine;
+    font-size: small;
+    margin: 4px;
+    width: 95px;
+    height: 95px;
+    background: #1363DF;
     padding: 10px;
     box-sizing: border-box;
     border: 1px solid blue;
-    border-radius: 90%;
+    border-radius: 100%;
 }
 .tarjeta-de-pokepon img{
     width: 80px;
@@ -29,5 +37,13 @@ h1 {
 .tarjetas{
     display: flex;
 
-    gap: 10px;
+    gap: 0px;
+}
+#buttSeleccionar{
+    font-family: "Merriweather";
+    width: 180px;
+    height: 40px;
+    border-radius: 5px;
+    background: #47B5FF;
+    border: 2px solid black;
 }
