@@ -42,13 +42,54 @@
     </section>
 
     <section id="seleccionar-ataque" style="display: none;">
-        <p>Tu mascota <span id="spanNombreMascotaJugador"></span> tiene <span id="spanVidasJugador">3 </span> vidas </p>
-        <p>La mascota <span id="spanNombreMascotaEnemiga"></span> enemiga tiene <span id="spanVidasEnemigo">3 </span> vidas </p>
+        <h2>Elige tu ataque</h2>
         <p>
-            <button id="buttFuego">Fuego 🔥</button>
-            <button id="buttAgua">Agua 💧</button>
-            <button id="buttTierra">Tierra 🌱</button>
+            <button id="buttFuego">🔥</button>
+            <button id="buttAgua"> 💧</button>
+            <button id="buttTierra">🌱</button>
         </p>
+        <div id="div-mensajes-combate">
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            Jugador
+                        </th>
+                        <th>
+                            Pokemon
+                        </th>
+                        <th>
+                            Vidas
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Humano
+                        </td>
+                        <td>
+                                <span id="spanNombreMascotaJugador"></span>
+                        </td>
+                        <td class="tdvidas">
+                                <span id="spanVidasJugador">3 </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Maquina
+                        </td>
+                        <td>
+                                <span id="spanNombreMascotaEnemiga"></span>
+                        </td>
+                        <td class="tdvidas">
+                                <span id="spanVidasEnemigo">3 </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
     </section>
     <section ID="mensajes">
 
