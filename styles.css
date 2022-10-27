@@ -49,6 +49,22 @@ h1 {
     background: #47B5FF;
     border: 1px solid black;
 }
+#mensajes-resultado{
+    border: 1px solid black;
+    width: 128px;
+    height: 28px;
+    margin: 10px auto;
+    padding-top: 2px;
+    padding-right: 2px;
+    border-radius: 10px;
+    color: gold;
+    background: blue;
+    box-sizing: border-box;
+    text-align: center;
+}
+#resultado-de-batalla{
+    margin: 0 auto;
+}
 #div-mensajes-combate{
     text-align: left;
 }
@@ -65,4 +81,16 @@ table{
 th,td {
     border: solid 5px blue;
     padding: 1px;
+}
+.ataques-tabla{
+    width: 168px;
+    height: 15px;
+    overflow: auto;
+    box-sizing: border-box;
+}
+.celdaVictorias{
+    width: 50px;
+    height: 15px;
+    overflow: auto;
+    box-sizing: border-box;
 }

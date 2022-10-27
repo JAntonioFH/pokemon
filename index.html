@@ -43,11 +43,14 @@
 
     <section id="seleccionar-ataque" style="display: none;">
         <h2>Elige tu ataque</h2>
-        <p>
+        <div id="division-botones">
             <button id="buttFuego">🔥</button>
             <button id="buttAgua"> 💧</button>
             <button id="buttTierra">🌱</button>
-        </p>
+        </div>
+        <div id="mensajes-resultado">
+            <span id="resultado-de-batalla"></span>
+        </div>
         <div id="div-mensajes-combate">
             <table>
                 <thead>
@@ -87,6 +90,33 @@
                         </td>
                     </tr>
                 </tbody>
+            </table>
+            <p></p>
+            <table>
+                <thead>
+                    |<tr>
+                        <th>
+                            Jugador
+                        </th>
+                        <td class="ataques-tabla">
+                            <span  id="ataques-jugador"></span>
+                        </td>
+                        <td class="celdaVictorias">
+                            <span  id="victoriasJugador"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Maquina
+                        </th>
+                        <td class="ataques-tabla">
+                            <span  id="ataques-maquina"> </span>
+                        </td>
+                        <td class="celdaVictorias">
+                            <span  id="victoriasEnemigo"></span>
+                        </td>
+                    </tr>
+                </thead>
             </table>
         </div>
         

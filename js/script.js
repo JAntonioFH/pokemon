@@ -62,6 +62,8 @@ function ataqueAleatorio(){
     combate()
 }
 function combate(){
+    let palomita = document.createElement("span")
+    palomita.innerHTML = "✔"
     if (guardarAtaqueJugador==guardarAtaqueEnemigo) {
         generarMensajes("Empate")
     }else if(guardarAtaqueJugador == "Fuego" && guardarAtaqueEnemigo == "Tierra" || guardarAtaqueJugador == "Tierra" && guardarAtaqueEnemigo == "Agua" || guardarAtaqueJugador == "Agua" && guardarAtaqueEnemigo == "Fuego"){
@@ -69,6 +71,7 @@ function combate(){
         
         guardarVidasEnemigo--
         document.getElementById("spanVidasEnemigo").innerHTML = guardarVidasEnemigo
+        document.getElementById("victoriasJugador").appendChild(palomita)
         if(guardarVidasEnemigo == 0 ){
             generarMensajeFinal(1)
         }
@@ -77,15 +80,41 @@ function combate(){
         
         guardarVidasJugador--
         document.getElementById("spanVidasJugador").innerHTML = guardarVidasJugador
+        document.getElementById("victoriasEnemigo").appendChild(palomita)
         if(guardarVidasJugador == 0 ){
             generarMensajeFinal(2)
         } 
     }
 }
 function generarMensajes(resultado){
-    let parrafo = document.createElement("p")
-    parrafo.innerHTML = "Tu mascota ataca con "+ guardarAtaqueJugador+", la mascota enemiga ataca con "+guardarAtaqueEnemigo+", "+resultado
-    document.getElementById("mensajes").appendChild(parrafo)
+    document.getElementById("resultado-de-batalla").innerHTML =  resultado
+    let simboloElementoJugador
+    let simboloElementoMaquina
+    let generarSimbolos = document.createElement("span")
+    let generarSimbolosM = document.createElement("span")
+    if (guardarAtaqueJugador == "Fuego") {
+        simboloElementoJugador= "🔥"
+        generarSimbolos.innerHTML = simboloElementoJugador
+    }else if(guardarAtaqueJugador == "Agua"){
+        simboloElementoJugador= "💧"
+        generarSimbolos.innerHTML = simboloElementoJugador
+    }else{
+        simboloElementoJugador= "🌱"
+        generarSimbolos.innerHTML = simboloElementoJugador
+    }
+    if (guardarAtaqueEnemigo == "Fuego") {
+        simboloElementoMaquina= "🔥"
+        generarSimbolosM.innerHTML = simboloElementoMaquina
+    }else if(guardarAtaqueEnemigo == "Agua"){
+        simboloElementoMaquina= "💧"
+        generarSimbolosM.innerHTML = simboloElementoMaquina
+    }else{
+        simboloElementoMaquina="🌱"
+        generarSimbolosM.innerHTML = simboloElementoMaquina
+    }
+    document.getElementById("ataques-jugador").appendChild(generarSimbolos)
+    document.getElementById("ataques-maquina").appendChild(generarSimbolosM)
+console.log(simboloElementoMaquina)
 }
 function generarMensajeFinal(r){
     let parrafo = document.createElement("p")
