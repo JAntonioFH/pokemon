@@ -35,6 +35,9 @@ h1 {
 .botones-seleccionar-mascota{
     display: none;
 }
+.botones-seleccionar-mascota:checked + label{
+    background-color: blue;
+}
 .tarjetas{
     font-weight: bolder;
     display: flex;
@@ -93,4 +96,15 @@ th,td {
     height: 15px;
     overflow: auto;
     box-sizing: border-box;
+}
+@media (min-width:1080px){
+    body{
+        width: 600px;
+        font-family: "Merriweather";
+        text-align: center;
+        background-color: azure;
+        padding: 0px 0;
+        margin: 0 auto;
+    }
+
 }

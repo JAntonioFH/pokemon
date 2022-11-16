@@ -4,12 +4,58 @@ let guardarAtaqueJugador
 let guardarAtaqueEnemigo
 let guardarVidasJugador = 3
 let guardarVidasEnemigo = 3
+let arregloMokepones = []
+let opcionMokepones
+
+class Mokepon{
+    constructor(nombre, foto, vida, ){
+        this.nombre = nombre
+        this.foto = foto
+        this.vida = vida
+        this.ataques = []
+    }
+}
+let bulbasaur = new Mokepon('bulbasaur','./assets/bulbasaur.png',5)
+let charmander = new Mokepon('charmander','./assets/charmander.png',5)
+let squirtle = new Mokepon('squirtle','./assets/squirtle.png',5)
+bulbasaur.ataques.push(
+    { nombre: '🌱', id:'buttTierra'},
+    { nombre: '🌱', id:'buttTierra'},
+    { nombre: '🌱', id:'buttTierra'},    
+    { nombre: '💧', id:'buttAgua'},
+    { nombre: '🔥', id:'buttFuego'},
+)
+charmander.ataques.push(
+    { nombre: '🔥', id:'buttFuego'},
+    { nombre: '🔥', id:'buttFuego'},
+    { nombre: '🔥', id:'buttFuego'},
+    { nombre: '💧', id:'buttAgua'},
+    { nombre: '🌱', id:'buttTierra'},
+)
+squirtle.ataques.push(
+    { nombre: '💧', id:'buttAgua'},
+    { nombre: '💧', id:'buttAgua'},
+    { nombre: '💧', id:'buttAgua'},
+    { nombre: '🔥', id:'buttFuego'},
+    { nombre: '🌱', id:'buttTierra'},
+)
+arregloMokepones.push(bulbasaur,charmander,squirtle)
 
 function iniciarJuego(){
     document.getElementById("buttSeleccionar").addEventListener("click", seleccionarMascotaJugador)
     document.getElementById("buttFuego").addEventListener("click", event => seleccionarAtaque("Fuego"))
     document.getElementById("buttAgua").addEventListener("click", event => seleccionarAtaque("Agua"))
     document.getElementById("buttTierra").addEventListener("click", event => seleccionarAtaque("Tierra"))
+    arregloMokepones.forEach(mokepon => {
+        opcionMokepones=`
+        <input class="botones-seleccionar-mascota" type="radio" name="mascotas" id=${mokepon.nombre}>
+        <label class="tarjeta-de-pokepon" for=${mokepon.nombre}>
+            <p>${mokepon.nombre}</p>
+            <img src=${mokepon.foto} alt=${mokepon.nombre}/>
+        </label>
+        `
+        document.getElementById("contenedor-tarjetas").innerHTML += opcionMokepones
+    })
 }
 function seleccionarMascotaJugador(){
     if (document.getElementById("bulbasaur").checked == true) {
