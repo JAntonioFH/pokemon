@@ -36,7 +36,7 @@ h1 {
     display: none;
 }
 .botones-seleccionar-mascota:checked + label{
-    background-color: blue;
+    background-color: green;
 }
 .tarjetas{
     font-weight: bolder;

@@ -15,9 +15,9 @@ class Mokepon{
         this.ataques = []
     }
 }
-let bulbasaur = new Mokepon('bulbasaur','./assets/bulbasaur.png',5)
-let charmander = new Mokepon('charmander','./assets/charmander.png',5)
-let squirtle = new Mokepon('squirtle','./assets/squirtle.png',5)
+let bulbasaur = new Mokepon('Bulbasaur','./assets/bulbasaur.png',5)
+let charmander = new Mokepon('Charmander','./assets/charmander.png',5)
+let squirtle = new Mokepon('Squirtle','./assets/squirtle.png',5)
 bulbasaur.ataques.push(
     { nombre: '🌱', id:'buttTierra'},
     { nombre: '🌱', id:'buttTierra'},
@@ -58,16 +58,16 @@ function iniciarJuego(){
     })
 }
 function seleccionarMascotaJugador(){
-    if (document.getElementById("bulbasaur").checked == true) {
-        guardarMascotaJugador = "Bulbasaur" 
+    if (document.getElementById("Bulbasaur").checked == true) {
+        guardarMascotaJugador = document.getElementById("Bulbasaur").id 
         seleccionarMascotaEnemigo()
         document.getElementById("spanNombreMascotaJugador").innerHTML = guardarMascotaJugador     
-    }else if(document.getElementById("charmander").checked == true){
-        guardarMascotaJugador = "Charmander" 
+    }else if(document.getElementById("Charmander").checked == true){
+        guardarMascotaJugador = document.getElementById("Charmander").id 
         seleccionarMascotaEnemigo()
         document.getElementById("spanNombreMascotaJugador").innerHTML = guardarMascotaJugador  
-    }else if(document.getElementById("squirtle").checked == true){
-        guardarMascotaJugador = "Squirtle" 
+    }else if(document.getElementById("Squirtle").checked == true){
+        guardarMascotaJugador = document.getElementById("Squirtle").id
         seleccionarMascotaEnemigo()
         document.getElementById("spanNombreMascotaJugador").innerHTML = guardarMascotaJugador  
     }else{
@@ -77,18 +77,8 @@ function seleccionarMascotaJugador(){
 function seleccionarMascotaEnemigo(){
     document.getElementById("seleccionar-ataque").style.display = "block"
     document.getElementById("seleccionar-mascota").style.display = "none"
-    let numeroAleatorio=aleatorio(1,3)
-
-    if (numeroAleatorio == 1 ) {
-        guardarMascotaEnemiga = "Bulbasaur" 
-        document.getElementById("spanNombreMascotaEnemiga").innerHTML = "Bulbasaur"
-    }else if(numeroAleatorio == 2){
-        guardarMascotaEnemiga = "Charmander" 
-        document.getElementById("spanNombreMascotaEnemiga").innerHTML = "Charmander"
-    }else if(numeroAleatorio == 3){
-        guardarMascotaEnemiga = "Squirtle"
-        document.getElementById("spanNombreMascotaEnemiga").innerHTML = "Squirtle" 
-    }
+    let numeroAleatorio=aleatorio(0, arregloMokepones.length -1)
+        document.getElementById("spanNombreMascotaEnemiga").innerHTML = arregloMokepones[numeroAleatorio].nombre
 }
 function seleccionarAtaque(ataque){
     if(guardarVidasEnemigo && guardarVidasJugador > 0){
